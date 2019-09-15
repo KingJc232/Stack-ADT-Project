@@ -119,7 +119,7 @@ public class InfixToPostfixConverter implements ExpressionConverterInterface
 		while(isOver == false && this.stack.isEmpty() == false)
 		{
 			//If The precendence level of the operator on the top of the stack has a lower precendence then OperatorToProcess
-			if(precendenceLevel(this.stack.peek()) <= precendenceLevel(operatorToProcess))
+			if(precendenceLevel(this.stack.peek()) < precendenceLevel(operatorToProcess))
 				isOver = true; //End the WhileLoop
 			else
 				outputExpression += this.stack.pop(); //Popping the operators from the stack 
