@@ -22,7 +22,8 @@ public class LinkedStack<T> implements StackInterface<T>
 	}
 
 	//Methods Defined in StackInterface
-  	/** Adds a new entry to the top of this stack.
+  	
+	/** Adds a new entry to the top of this stack.
             @param newEntry  An object to be added to the stack. */
 	public void push(T newEntry)
 	{

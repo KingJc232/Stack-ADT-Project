@@ -13,7 +13,18 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		//LinkedStack<Integer> stack = new LinkedStack<>(); //Creating a LinkedStack Data Structure 
-		ArrayStack<Integer> stack = new ArrayStack<>();
-	}
+		//LinkedStack<Character> stack = new LinkedStack<>(); //Creating a LinkedStack Data Structure 
+		ArrayStack<Character> stack = new ArrayStack<>();
+
+		ExpressionConverterInterface test = new InfixToPostfixConverter(stack);
+
+		System.out.println(test.convert("A+B- C * D^E + (F /G /H)")); //Testing a Simple Example 
+
+		System.out.println("Stack: " + stack);		
+		
+	}	
+
+
+
+
 }

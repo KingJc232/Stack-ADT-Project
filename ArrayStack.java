@@ -5,6 +5,9 @@
  * */
 
 
+/** Suppressing the unchecked Warnings given by the Generic Array this.data*/
+@SuppressWarnings("unchecked")
+
 //Generic Data Structure
 public class ArrayStack<T> implements StackInterface<T>
 {
@@ -18,10 +21,10 @@ public class ArrayStack<T> implements StackInterface<T>
 	//Default Constructor 
 	public ArrayStack()
 	{
-		this(DEFAULT_SIZE); //Initializing the data Using the Initializor Constructor 
+		this(DEFAULT_SIZE); //Initializing the data Using the Initializer Constructor 
 	}
 
-	//Initializor Constructor 
+	//Initializer Constructor 
 	public ArrayStack(int initialSize)
 	{
 		this.qtyOfItems = 0; //Initially there are No Elements in the ArrayStack
@@ -34,7 +37,7 @@ public class ArrayStack<T> implements StackInterface<T>
 	public void push(T newEntry)
 	{
 		//Checking if the this.data Generic Array needs more memory 
-		if(this.qtyOfItems == this.data.length)
+		if(this.qtyOfItems >= this.data.length)
 		{
 			this.resize(); //Calling a Helped Method To Double the Size of the this.data array
 		}

@@ -10,10 +10,10 @@ public class EmptyStackException extends RuntimeException
 	//Default Constructor
 	public EmptyStackException()
 	{
-		this("EmptyStackException"); //Using the Initializor Constructor 
+		this("EmptyStackException"); //Using the Initializer Constructor 
 	}
 
-	//Initializor Constructor 
+	//Initializer Constructor 
 	public EmptyStackException(String msg)
 	{
 		super(msg);
